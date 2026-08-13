@@ -69,11 +69,11 @@ export default function IndustrySection() {
       <div className="container-content">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-sans text-[2rem] font-extrabold leading-tight tracking-tight text-navy sm:text-[2.5rem]">
-            Two industries.{" "}
+            Two Industries.{" "}
             <span className="font-serif font-normal italic text-gold">
               One
             </span>{" "}
-            framework.
+            Framework.
           </h2>
           <p className="mt-5 font-sans text-[17px] leading-relaxed text-charcoal/70">
             The Content-to-Community Flywheel is especially relevant where

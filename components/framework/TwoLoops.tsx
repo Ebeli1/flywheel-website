@@ -76,11 +76,11 @@ export default function TwoLoops() {
       <div className="container-content">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-sans text-[2rem] font-extrabold leading-tight tracking-tight text-navy sm:text-[2.5rem]">
-            One flywheel.{" "}
+            One Flywheel.{" "}
             <span className="font-serif font-normal italic text-gold">
               Two
             </span>{" "}
-            powerful loops.
+            Powerful Loops.
           </h2>
         </div>
 
