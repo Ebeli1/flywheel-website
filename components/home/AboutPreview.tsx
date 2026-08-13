@@ -7,7 +7,7 @@ export default function AboutPreview() {
         {/* Portrait */}
         <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl bg-navy shadow-[0_25px_60px_-25px_rgba(16,25,46,0.5)] lg:max-w-none">
           <Image
-            src="/NgoziOne.png"
+            src="/Ngozi.png"
             alt="Ngozi Chizaram"
             fill
             className="object-cover"
