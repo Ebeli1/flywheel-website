@@ -9,78 +9,82 @@ export type FlywheelStage = {
 
 // The nine-stage cycle. Order matters — it's also the click/tab order and
 // the order rendered in the mobile vertical journey. Each stage carries its
-// own accent color based on the Content-to-Community Flywheel design.
+// own accent color, chosen as a coordinated warm-to-cool arc (no purple, to
+// stay clear of the brand's retired accent) so the ring reads as a
+// deliberate palette rather than random color.
 export const flywheelStages: FlywheelStage[] = [
   {
     id: "search",
     number: "01",
     label: "Search",
-    tagline: "People search. You're discovered.",
+    tagline: "Discovery",
     description: "What questions are people already asking?",
-    accent: "#4A90D9", // Bright Blue - Search
+    accent: "#3B6E8F",
   },
   {
     id: "content",
     number: "02",
     label: "Content",
-    tagline: "You create valuable answers.",
+    tagline: "Education",
     description: "Create useful answers around real search intent.",
-    accent: "#2ECC71", // Emerald Green - Content
+    accent: "#1F8A7A",
   },
   {
     id: "trust",
     number: "03",
     label: "Trust",
-    tagline: "Consistent value builds credibility.",
+    tagline: "Credibility",
     description: "Helpful experiences give people reasons to believe you.",
-    accent: "#F39C12", // Golden Orange - Trust
+    accent: "#6B8F5A",
   },
   {
     id: "community",
     number: "04",
     label: "Community",
-    tagline: "People join, engage & connect.",
+    tagline: "Connection",
     description: "Give people somewhere to continue the conversation.",
-    accent: "#E74C3C", // Red - Community
+    accent: "#C08A28",
   },
   {
     id: "insights",
     number: "05",
     label: "Insights",
-    tagline: "Conversations reveal real needs.",
+    tagline: "Learning",
     description: "Conversations reveal questions, needs, language, and gaps.",
-    accent: "#9B59B6", // Purple - Insights
+    accent: "#C2703D",
   },
   {
     id: "better-content",
     number: "06",
     label: "Better Content",
-    tagline: "You create more relevant content.",
+    tagline: "Iteration",
     description: "Turn real insights into more useful content.",
-    accent: "#E67E22", // Orange - Better Content
+    accent: "#A6482E",
   },
   {
     id: "adoption",
     number: "07",
-    label: "Adoption",
-    tagline: "People understand, use, and get results.",
-    description: "Help people understand and successfully use what you've built.",
-    accent: "#1ABC9C", // Teal - Adoption
+    label: "Product Adoption",
+    tagline: "Action",
+    description:
+      "Help people understand and successfully use what you've built.",
+    accent: "#8C3B4A",
   },
   {
     id: "advocacy",
     number: "08",
     label: "Advocacy",
-    tagline: "They recommend, refer & come back.",
+    tagline: "Growth",
     description: "Satisfied users become repeat users, advocates, and referrers.",
-    accent: "#E74C3C", // Red - Advocacy
+    accent: "#3B4A6B",
   },
   {
     id: "revenue",
     number: "09",
     label: "Revenue",
-    tagline: "Trust, loyalty, and value drive growth.",
-    description: "Build a system where education and trust contribute to sustainable growth.",
-    accent: "#2ECC71", // Emerald Green - Revenue
+    tagline: "Business Outcome",
+    description:
+      "Build a system where education and trust contribute to sustainable growth.",
+    accent: "#8A6A3F",
   },
 ];

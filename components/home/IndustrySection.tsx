@@ -35,6 +35,7 @@ function IndustryCard({ industry }: { industry: Industry }) {
         {industry.body}
       </p>
 
+      {/* Flow chips */}
       <div className="mt-6 flex flex-wrap items-center gap-x-1.5 gap-y-2">
         {industry.flow.map((step, index) => (
           <span key={step} className="flex items-center gap-1.5">

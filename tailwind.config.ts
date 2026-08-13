@@ -9,26 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-         navy: {
+        navy: {
           DEFAULT: "#10192E",
           light: "#1C2A47",
           soft: "#2B3B5C",
-           },
-         gold: {
+        },
+        gold: {
           DEFAULT: "#C08A28",
           soft: "#F6ECD9",
-           },
-           sage: {
-            DEFAULT: "#6B8F5A",
-            soft: "#E7EEE3",
-             },
-          teal: {
-           DEFAULT: "#1F8A7A",
-           soft: "#E1F1EE",
-           },
-           cream: "#F7F3EC",
-           charcoal: "#1E1E22",
-           },
+        },
+        sage: {
+          DEFAULT: "#6B8F5A",
+          soft: "#E7EEE3",
+        },
+        teal: {
+          DEFAULT: "#1F8A7A",
+          soft: "#E1F1EE",
+        },
+        cream: "#F7F3EC",
+        charcoal: "#1E1E22",
+      },
       fontFamily: {
         sans: ["var(--font-manrope)", "system-ui", "sans-serif"],
         serif: ["var(--font-fraunces)", "Georgia", "serif"],

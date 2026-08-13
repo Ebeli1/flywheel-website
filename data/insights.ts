@@ -5,6 +5,8 @@ export type InsightPreview = {
   excerpt: string;
 };
 
+// Featured on the homepage / insights preview. The full article pages come
+// later with the MDX content system (blueprint Step 5).
 export const featuredInsights: InsightPreview[] = [
   {
     id: "content-to-community-flywheel",

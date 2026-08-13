@@ -21,7 +21,7 @@ export default function InsightsPreview() {
           {featuredInsights.map((insight) => (
             <a
               key={insight.id}
-              href={`/insights/${insight.id}`}
+              href="/insights"
               className="focus-ring group flex flex-col rounded-3xl border border-navy/10 bg-cream p-7 transition-colors hover:border-teal/30"
             >
               <span className="inline-block w-fit rounded-full bg-navy/5 px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-wide text-navy/60">

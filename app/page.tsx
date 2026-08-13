@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import ProblemSection from "@/components/home/ProblemSection";
 import FrameworkIntro from "@/components/framework/FrameworkIntro";
@@ -9,6 +10,10 @@ import AboutPreview from "@/components/home/AboutPreview";
 import ProofSection from "@/components/home/ProofSection";
 import CaseStudyPreview from "@/components/home/CaseStudyPreview";
 import InsightsPreview from "@/components/home/InsightsPreview";
+import FlywheelLabPreview from "@/components/home/FlywheelLabPreview";
+import NewsletterCTA from "@/components/home/NewsletterCTA";
+import WorkWithMe from "@/components/home/WorkWithMe";
+import FinalCTA from "@/components/home/FinalCTA";
 
 export default function HomePage() {
   return (
@@ -25,15 +30,12 @@ export default function HomePage() {
         <ProofSection />
         <CaseStudyPreview />
         <InsightsPreview />
-        {/*
-          Next sections per the blueprint, in build order:
-          <FlywheelLabPreview />
-          <NewsletterCTA />
-          <WorkWithMe />
-          <FinalCTA />
-          <Footer />
-        */}
+        <FlywheelLabPreview />
+        <NewsletterCTA />
+        <WorkWithMe />
+        <FinalCTA />
       </main>
+      <Footer />
     </>
   );
 }

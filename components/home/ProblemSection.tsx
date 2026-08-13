@@ -16,6 +16,8 @@ const disconnects = [
 export default function ProblemSection() {
   return (
     <section className="relative overflow-hidden bg-navy py-20 md:py-28">
+      {/* Subtle depth, not decoration for its own sake — keeps the dark
+          section from reading as a flat block */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute left-1/2 top-0 h-[500px] w-[900px] -translate-x-1/2 rounded-full bg-teal/10 blur-[140px]"
@@ -40,6 +42,7 @@ export default function ProblemSection() {
           </div>
         </div>
 
+        {/* Four systems that don't talk to each other */}
         <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
           {systems.map((system) => (
             <div
@@ -56,6 +59,7 @@ export default function ProblemSection() {
           ))}
         </div>
 
+        {/* The disconnect */}
         <div className="mt-6 flex items-center gap-4">
           <div className="h-px flex-1 border-t border-dashed border-cream/20" />
           <p className="whitespace-nowrap font-sans text-[13px] font-bold uppercase tracking-[0.14em] text-cream/40">
@@ -76,6 +80,7 @@ export default function ProblemSection() {
           ))}
         </ul>
 
+        {/* Closing statement */}
         <p className="mx-auto mt-14 max-w-2xl text-center font-sans text-[1.5rem] font-semibold leading-snug text-cream sm:text-[1.75rem]">
           The opportunity isn&apos;t always more content.
           <br />
