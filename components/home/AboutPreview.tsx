@@ -4,17 +4,15 @@ export default function AboutPreview() {
   return (
     <section id="about" className="scroll-mt-24 py-20 md:py-28">
       <div className="container-content grid grid-cols-1 items-center gap-12 lg:grid-cols-[40%_60%] lg:gap-16">
-        {/* Portrait */}
         <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl bg-navy shadow-[0_25px_60px_-25px_rgba(16,25,46,0.5)] lg:max-w-none">
           <Image
-            src="/Ngozi.jpeg"
+            src="/NgoziOne.png"
             alt="Ngozi Chizaram"
             fill
             className="object-cover"
           />
         </div>
 
-        {/* Copy */}
         <div className="max-w-xl">
           <p className="font-sans text-[13px] font-semibold uppercase tracking-[0.14em] text-teal">
             Behind the Framework
