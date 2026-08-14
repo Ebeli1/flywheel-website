@@ -48,6 +48,7 @@ export function getInsightBySlug(
       excerpt: data.excerpt,
       date: data.date,
       tags: data.tags ?? [],
+      coverImage: data.coverImage,
       slug,
       readingTimeText: stats.text,
     },

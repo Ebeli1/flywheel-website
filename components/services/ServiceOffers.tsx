@@ -1,7 +1,7 @@
 import { serviceOffers, type ServiceOffer } from "@/data/service-offers";
 
 // TODO: replace with your real contact email.
-const CONTACT_EMAIL = "hello@ngozichizaram.com";
+const CONTACT_EMAIL = "chizaramngozi@gmail.com";
 
 function OfferCard({ offer }: { offer: ServiceOffer }) {
   return (

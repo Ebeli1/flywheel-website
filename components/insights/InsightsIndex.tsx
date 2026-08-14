@@ -61,16 +61,22 @@ export default function InsightsIndex({ insights }: { insights: InsightMeta[] })
               href={`/insights/${insight.slug}`}
               className="focus-ring group flex flex-col overflow-hidden rounded-3xl border border-navy/10 bg-white transition-colors hover:border-teal/30"
             >
-              {insight.coverImage && (
-                <div className="relative aspect-[16/10] w-full bg-navy">
-                  <Image
-                    src={insight.coverImage}
-                    alt={insight.title}
-                    fill
-                    className="object-cover"
-                  />
+             <div className="relative h-40 w-full bg-navy">
+            {insight.coverImage ? (
+              <Image
+                src={insight.coverImage}
+                 alt={insight.title}
+                  fill
+                    className="object-contain"
+                    />
+                     ) : (
+                      <div className="flex h-full w-full items-center justify-center">
+                    <span className="font-serif text-[13px] italic text-cream/40">
+                  Content-to-Community Flywheel™
+                 </span>
                 </div>
-              )}
+               )}
+             </div>
               <div className="flex flex-1 flex-col p-7">
                 <span className="inline-block w-fit rounded-full bg-navy/5 px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-wide text-navy/60">
                   {insight.category}

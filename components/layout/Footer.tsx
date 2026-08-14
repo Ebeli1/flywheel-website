@@ -2,7 +2,7 @@ import { primaryNav } from "@/data/navigation";
 
 // TODO: replace with your real LinkedIn URL and contact email.
 const LINKEDIN_URL = "https://linkedin.com/in/ngozichizaram";
-const CONTACT_EMAIL = "hello@ngozichizaram.com";
+const CONTACT_EMAIL = "chizaramngozi@gmail.com";
 
 const footerLinks = [
   ...primaryNav,

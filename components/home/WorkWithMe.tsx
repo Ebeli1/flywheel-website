@@ -1,7 +1,7 @@
 import { services } from "@/data/services";
 
 // TODO: replace with your real contact email or a proper contact form.
-const CONTACT_EMAIL = "hello@ngozichizaram.com";
+const CONTACT_EMAIL = "chizaramngozi@gmail.com";
 
 export default function WorkWithMe() {
   return (
