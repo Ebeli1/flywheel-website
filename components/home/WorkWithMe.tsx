@@ -21,17 +21,21 @@ export default function WorkWithMe() {
 
         <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-3">
           {services.map((service) => (
-            <div
+            <a
               key={service.id}
-              className="rounded-2xl border border-navy/10 bg-white p-6"
+              href={service.href}
+              className="focus-ring group rounded-2xl border border-navy/10 bg-white p-6 transition-colors hover:border-teal/30"
             >
-              <p className="font-sans text-[15px] font-bold text-navy">
+              <p className="font-sans text-[15px] font-bold text-navy transition-colors group-hover:text-teal">
                 {service.title}
               </p>
               <p className="mt-2 font-sans text-[14px] leading-relaxed text-charcoal/65">
                 {service.description}
               </p>
-            </div>
+              <span className="mt-3 inline-flex items-center gap-1 font-sans text-[13px] font-semibold text-teal">
+                See details <span aria-hidden="true">→</span>
+              </span>
+            </a>
           ))}
         </div>
 

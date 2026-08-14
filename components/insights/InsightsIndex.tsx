@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { InsightMeta } from "@/lib/mdx";
+import Image from "next/image";
 
 const CATEGORIES = [
   "All",
@@ -58,20 +59,32 @@ export default function InsightsIndex({ insights }: { insights: InsightMeta[] })
             <a
               key={insight.slug}
               href={`/insights/${insight.slug}`}
-              className="focus-ring group flex flex-col rounded-3xl border border-navy/10 bg-white p-7 transition-colors hover:border-teal/30"
+              className="focus-ring group flex flex-col overflow-hidden rounded-3xl border border-navy/10 bg-white transition-colors hover:border-teal/30"
             >
-              <span className="inline-block w-fit rounded-full bg-navy/5 px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-wide text-navy/60">
-                {insight.category}
-              </span>
-              <h2 className="mt-4 font-sans text-[1.125rem] font-bold leading-snug text-navy transition-colors group-hover:text-teal">
-                {insight.title}
-              </h2>
-              <p className="mt-3 flex-1 font-sans text-[14px] leading-relaxed text-charcoal/65">
-                {insight.excerpt}
-              </p>
-              <span className="mt-5 font-sans text-[13px] text-charcoal/45">
-                {insight.readingTimeText}
-              </span>
+              {insight.coverImage && (
+                <div className="relative aspect-[16/10] w-full bg-navy">
+                  <Image
+                    src={insight.coverImage}
+                    alt={insight.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-7">
+                <span className="inline-block w-fit rounded-full bg-navy/5 px-3 py-1 font-sans text-[11px] font-bold uppercase tracking-wide text-navy/60">
+                  {insight.category}
+                </span>
+                <h2 className="mt-4 font-sans text-[1.125rem] font-bold leading-snug text-navy transition-colors group-hover:text-teal">
+                  {insight.title}
+                </h2>
+                <p className="mt-3 flex-1 font-sans text-[14px] leading-relaxed text-charcoal/65">
+                  {insight.excerpt}
+                </p>
+                <span className="mt-5 font-sans text-[13px] text-charcoal/45">
+                  {insight.readingTimeText}
+                </span>
+              </div>
             </a>
           ))}
         </div>

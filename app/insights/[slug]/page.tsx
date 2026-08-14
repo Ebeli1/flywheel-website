@@ -1,9 +1,24 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
+import Image from "next/image";
 import type { Metadata } from "next";
+import type { ImgHTMLAttributes } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { getAllInsightSlugs, getInsightBySlug } from "@/lib/mdx";
+
+// Inline images written as ![alt](/insights/photo.jpg) in the MDX body get
+// this styling automatically — no need to add classes in the article itself.
+function ArticleImage(props: ImgHTMLAttributes<HTMLImageElement>) {
+  // eslint-disable-next-line @next/next/no-img-element
+  return (
+    <img
+      {...props}
+      loading="lazy"
+      className="my-8 w-full rounded-2xl border border-navy/10"
+    />
+  );
+}
 
 export function generateStaticParams() {
   return getAllInsightSlugs().map((slug) => ({ slug }));
@@ -93,11 +108,25 @@ export default function InsightArticlePage({
           <span>{meta.readingTimeText}</span>
         </div>
 
+        {/* Cover image */}
+        {meta.coverImage && (
+          <div className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-3xl bg-navy">
+            <Image
+              src={meta.coverImage}
+              alt={meta.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
+
         {/* Article body */}
         <article className="prose prose-headings:font-sans prose-headings:text-navy prose-p:font-sans prose-p:text-charcoal/80 prose-p:leading-relaxed prose-a:text-teal prose-strong:text-navy mt-10 max-w-none">
           <MDXRemote
             source={content}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            components={{ img: ArticleImage }}
           />
         </article>
 

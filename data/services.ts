@@ -2,25 +2,27 @@ export type Service = {
   id: string;
   title: string;
   description: string;
+  href: string;
 };
 
 export const services: Service[] = [
   {
-    id: "seo-content-strategy",
-    title: "SEO Content Strategy",
+    id: "audit",
+    title: "Content-to-Community Audit",
     description:
-      "Search intent, content architecture, editorial strategy, optimization.",
+      "A Content-to-Community Gap Report covering your SEO, content, community, and support.",
+    href: "/work-with-me#audit",
   },
   {
-    id: "community-growth-strategy",
-    title: "Community Growth Strategy",
-    description:
-      "Community engagement, content-to-community systems, insight gathering.",
+    id: "pilot",
+    title: "Flywheel Pilot",
+    description: "Build the Flywheel in 30 Days — a working system, not a one-off project.",
+    href: "/work-with-me#pilot",
   },
   {
-    id: "ai-content-systems",
-    title: "AI Content Systems",
-    description:
-      "AI-assisted research, optimization, workflows, and content operations.",
+    id: "retainer",
+    title: "Growth Advisory",
+    description: "Ongoing strategic advisory connecting search, content, community, and product.",
+    href: "/work-with-me#retainer",
   },
 ];

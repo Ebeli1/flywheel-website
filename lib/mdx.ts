@@ -11,6 +11,7 @@ export type InsightFrontmatter = {
   excerpt: string;
   date: string; // ISO date, e.g. "2026-08-13"
   tags: string[];
+  coverImage?: string; // path under /public, e.g. "/insights/flywheel-cover.jpg"
 };
 
 export type InsightMeta = InsightFrontmatter & {
